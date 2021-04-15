@@ -1,0 +1,3 @@
+include ':heartrate'
+include ':app'
+rootProject.name = "Demo33333"

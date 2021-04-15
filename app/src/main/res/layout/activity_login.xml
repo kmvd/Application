@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  用户名输入限制数字及字母  -->
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50sp"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="请输入用户名"
+        android:lines="1"
+        android:paddingStart="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitle" />
+
+    <EditText
+        android:id="@+id/userPwd"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50sp"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="请输入用户密码"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:paddingStart="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/login_user"
+        app:layout_constraintBottom_toBottomOf="@id/userName"
+        app:layout_constraintLeft_toLeftOf="@id/userName"
+        app:layout_constraintTop_toTopOf="@id/userName" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/login_pwd"
+        app:layout_constraintBottom_toBottomOf="@id/userPwd"
+        app:layout_constraintLeft_toLeftOf="@id/userPwd"
+        app:layout_constraintTop_toTopOf="@id/userPwd" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/green"
+        android:text="登录"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/userPwd"
+        app:layout_constraintRight_toRightOf="@id/userPwd"
+        app:layout_constraintTop_toBottomOf="@id/userPwd" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical|start"
+        android:text="注册"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical|end"
+        android:text="忘记密码"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="@id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

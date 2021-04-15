@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transWhite">#C6FFFFFF</color>
+    <!--  这款 app 主体颜色  -->
+    <color name="green">#64CA6A</color>
+    <!--  一些细小字体的灰色  -->
+    <color name="gray">#9A9A9A</color>
+    <!--  用到的淡蓝色  -->
+    <color name="blue">#5CB4F1</color>
+    <!--  用到的一些红色  -->
+    <color name="red">#FC6E7B</color>
+    <!--  浅灰色  -->
+    <color name="gray2">#CECCCD</color>
+
+</resources>

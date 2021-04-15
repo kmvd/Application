@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="317dp"
+        android:layout_marginEnd="317dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--<View-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--android:layout_weight="1" />-->
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/barView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!--<com.example.hospitalscreen.view.AppBarView-->
+        <!--android:id="@+id/barView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent">-->
+
+
+        <!--<com.example.hospitalscreen.view.AppBarViewItem-->
+        <!--android:id="@+id/bar_home"-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--app:tabIconNormal="@drawable/home_default"-->
+        <!--app:tabIconSelected="@drawable/home_select" />-->
+
+        <!--<com.example.hospitalscreen.view.AppBarViewItem-->
+        <!--android:id="@+id/bar_bed"-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--app:tabIconNormal="@drawable/bed_default"-->
+        <!--app:tabIconSelected="@drawable/bed_select" />-->
+
+        <!--<com.example.hospitalscreen.view.AppBarViewItem-->
+
+        <!--android:id="@+id/bar_doctor"-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--app:tabIconNormal="@drawable/doctor_default"-->
+        <!--app:tabIconSelected="@drawable/doctor_select" />-->
+
+        <!--<com.example.hospitalscreen.view.AppBarViewItem-->
+        <!--android:id="@+id/bar_surgery"-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--app:tabIconNormal="@drawable/surgery_default"-->
+        <!--app:tabIconSelected="@drawable/surgery_select" />-->
+
+        <!--<com.example.hospitalscreen.view.AppBarViewItem-->
+        <!--android:id="@+id/bar_remark"-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--app:tabIconNormal="@drawable/remark_default"-->
+        <!--app:tabIconSelected="@drawable/remark_select" />-->
+
+
+        <!--</com.example.hospitalscreen.view.AppBarView>-->
+
+        <!--<View-->
+        <!--style="@style/MainActivityBarStyle"-->
+        <!--android:layout_weight="1" />-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

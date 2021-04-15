@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HeartRateActivity">
+
+    <View
+        android:id="@+id/greenBgView"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:background="@color/green"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="心率"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/roundBgView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintLeft_toLeftOf="@id/greenBgView"
+        app:layout_constraintRight_toRightOf="@id/greenBgView"
+        app:layout_constraintTop_toTopOf="@id/greenBgView" />
+
+    <TextView
+        android:id="@+id/heartRateTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="指标值"
+        android:textColor="@color/transWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/heartRateValue"
+        app:layout_constraintLeft_toLeftOf="@id/roundBgView"
+        app:layout_constraintRight_toRightOf="@id/roundBgView"
+        app:layout_constraintTop_toTopOf="@id/roundBgView" />
+
+    <TextView
+        android:id="@+id/heartRateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="59"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/heartRateInfo"
+        app:layout_constraintLeft_toLeftOf="@id/roundBgView"
+        app:layout_constraintRight_toRightOf="@id/roundBgView"
+        app:layout_constraintTop_toBottomOf="@id/heartRateTip" />
+
+    <TextView
+        android:id="@+id/heartRateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="偏低"
+        android:textColor="@color/transWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/roundBgView"
+        app:layout_constraintLeft_toLeftOf="@id/roundBgView"
+        app:layout_constraintRight_toRightOf="@id/roundBgView"
+        app:layout_constraintTop_toBottomOf="@id/heartRateValue" />
+
+    <TextView
+        android:id="@+id/heartRateRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="60~100"
+        android:textColor="@color/transWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/greenBgView"
+        app:layout_constraintLeft_toLeftOf="@id/greenBgView" />
+
+    <TextView
+        android:id="@+id/heartRateRangeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标准值:"
+        android:textColor="@color/transWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/heartRateRange"
+        app:layout_constraintLeft_toLeftOf="@id/heartRateRange" />
+
+    <TextView
+        android:id="@+id/heartRateUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="单位:bpm"
+        android:textColor="@color/transWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/greenBgView"
+        app:layout_constraintLeft_toLeftOf="@id/greenBgView"
+        app:layout_constraintRight_toRightOf="@id/greenBgView" />
+
+    <EditText
+        android:id="@+id/heartRateInput"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:hint="输入当前心率/bpm"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greenBgView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/inputHeartRateBtn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:text="手动录入"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heartRateInput" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/autoInputHeartRateBtn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:text="就是这个按钮！自动检测"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputHeartRateBtn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

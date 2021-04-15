@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/searchBg"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+        android:background="@drawable/search_bg"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="70dp"
+        android:text="搜索"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@id/searchBg"
+        app:layout_constraintLeft_toLeftOf="@id/searchBg"
+        app:layout_constraintTop_toTopOf="@id/searchBg" />
+
+    <!--    binner 图片轮播  -->
+    <!--        app:pointNormal="@drawable/shape_noraml"-->
+    <!--        app:pointSelect="@drawable/shape_selected"-->
+    <com.stx.xhb.androidx.XBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/xbanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="3dp"
+        app:AutoPlayTime="3000"
+        app:isShowIndicatorOnlyOne="true"
+        app:isShowNumberIndicator="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBg"
+        app:pageChangeDuration="800"
+        app:pointsContainerBackground="#44aaaaaa"
+        app:pointsPosition="RIGHT"
+        app:tipTextSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/headerViewLL"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/xbanner">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/stepCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toTopOf="@id/spaceView1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/spaceView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@id/stepCountTip"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stepCount" />
+
+            <TextView
+                android:id="@+id/stepCountTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="今日步数"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/stepCount"
+                app:layout_constraintRight_toRightOf="@id/stepCount"
+                app:layout_constraintTop_toBottomOf="@id/spaceView1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/heartRateCl"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/heartRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toTopOf="@id/spaceView2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/spaceView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@id/heartRateTip"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/heartRate" />
+
+            <TextView
+                android:id="@+id/heartRateTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="心率/bpm"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/heartRate"
+                app:layout_constraintRight_toRightOf="@id/heartRate"
+                app:layout_constraintTop_toBottomOf="@id/spaceView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/headerTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="健康头条"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerViewLL" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/headerTv"
+        app:layout_constraintRight_toLeftOf="@id/headerTv"
+        app:layout_constraintTop_toTopOf="@id/headerTv" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/headerTv"
+        app:layout_constraintLeft_toRightOf="@id/headerTv"
+        app:layout_constraintTop_toTopOf="@id/headerTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
